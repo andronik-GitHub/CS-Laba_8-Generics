@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
@@ -26,6 +27,8 @@ class Box<T> where T : IComparable<T>
 
         return SB.ToString();
     }
+
+    public IEnumerator GetEnumerator() => newArr.GetEnumerator();
 
     public void Add(T element) => Arr.Add(element);
 
